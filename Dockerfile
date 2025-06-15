@@ -41,5 +41,5 @@ ENV PATH="/home/ubuntu/$APP_NAME/venv/bin:${PATH}"
 # Verify gunicorn is in PATH
 RUN which gunicorn
 
-# Set default command
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "your_project.wsgi:application"]
+# ✅ Corrected line below
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "crm.wsgi:application"]
